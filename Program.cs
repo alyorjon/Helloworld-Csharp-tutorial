@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Net.Mime;
+using HELLOWORLD;
 class Program
 {
     static void Main()
@@ -16,7 +17,7 @@ class Program
         Collactions();
         TalabaInfo();
         Queues();
-        RestoranNavbati();
+        // RestoranNavbati();
         Stackes();
         Methods();
         Classes();
@@ -33,6 +34,9 @@ class Program
         int b = 2;
         int sum = Add(a, b);
         Console.WriteLine($"Sum of two numbers is: " + sum);
+        Person p = new Person("Alyor", 29);
+        Console.WriteLine(p.Name);
+        p.Great();
     }
     private static int Add(int a, int b) {
         return a + b;

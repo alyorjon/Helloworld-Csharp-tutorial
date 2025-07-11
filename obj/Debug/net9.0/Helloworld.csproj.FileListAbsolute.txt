@@ -10,3 +10,4 @@
 /home/user/projects/csharp/lesson1/Helloworld/obj/Debug/net9.0/Helloworld.pdb
 /home/user/projects/csharp/lesson1/Helloworld/obj/Debug/net9.0/Helloworld.genruntimeconfig.cache
 /home/user/projects/csharp/lesson1/Helloworld/obj/Debug/net9.0/ref/Helloworld.dll
+/home/user/projects/csharp/lesson1/Helloworld/obj/Debug/net9.0/Helloworld.sourcelink.json
