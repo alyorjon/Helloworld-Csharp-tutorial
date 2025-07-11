@@ -21,11 +21,75 @@ class Program
         Stackes();
         Methods();
         Classes();
+        KitobMisol();
+        StudentMisol();
 
+    }
+    
+
+// Foydalanish misoli
+static void StudentMisol()
+{
+    // Talabalar yaratish
+    Student talaba1 = new Student(1001, "Ali", "Valiyev", new DateTime(2000, 5, 15));
+    Student talaba2 = new Student(1002, "Malika", "Karimova", new DateTime(1999, 8, 22));
+    
+    // Ma'lumot qo'shish
+    talaba1.PhoneNumber = "+998901234567";
+    talaba1.Address = "Toshkent, Chilonzor";
+    
+    // Ballar qo'shish
+    talaba1.AddGrade(85);
+    talaba1.AddGrade(92);
+    talaba1.AddGrade(78);
+    talaba1.AddGrade(88);
+    
+    talaba2.AddGrade(95);
+    talaba2.AddGrade(87);
+    talaba2.AddGrade(91);
+    
+    // Ma'lumotlarni ko'rish
+    Console.WriteLine(talaba1.GetGradeReport());
+    Console.WriteLine(talaba2.GetGradeReport());
+    
+    // Taqqoslash
+    Console.WriteLine($"Ali honor talabami? {talaba1.IsHonorStudent()}");
+    Console.WriteLine($"Malika GPA: {talaba2.GPA}");
+    
+    // Status tekshirish
+    if (talaba1.CompareGPA(talaba2) > 0)
+        Console.WriteLine($"{talaba1.FullName} yuqori GPA ga ega");
+    else
+        Console.WriteLine($"{talaba2.FullName} yuqori GPA ga ega");
+}
+    static void KitobMisol()
+    {
+        // Ob'ektlar yaratish
+        Book kitob1 = new Book("978-123456789", "C# Dasturlash", "John Smith", 450, new DateTime(2023, 1, 15));
+        Book kitob2 = new Book("978-987654321", "Python Asoslari", "Jane Doe", 320, new DateTime(2022, 6, 10));
+
+        // Properties bilan ishlash
+        Console.WriteLine($"Birinchi kitob: {kitob1.Title}");
+        Console.WriteLine($"Sahifalar soni: {kitob1.Pages}");
+        Console.WriteLine($"Kitob yoshi: {kitob1.BookAge} yil");
+
+        // Methods chaqirish
+        kitob1.Borrow("Ali Valiyev");
+        kitob1.Return();
+
+        Console.WriteLine(kitob1.GetBookInfo());
+
+        // Static members
+        Book.PrintTotalBooks();
+        Console.WriteLine($"Umumiy kitoblar: {Book.TotalBooks}");
     }
     static void Classes()
     {
-        
+        Car car = new Car("Mers", "J2");
+        Console.WriteLine(car.Model);
+        BankAccount bankAccount = new BankAccount("1234", "Alyorjon", "C");
+        bankAccount.Balance = 3;
+        Console.WriteLine(bankAccount.Balance);
     }
     static void Methods()
     {
